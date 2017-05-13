@@ -58,7 +58,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
       
     }
     
-     // MARK: - NewWorking
+    // MARK: - NewWorking
     
     func getListOfFeed(){
         

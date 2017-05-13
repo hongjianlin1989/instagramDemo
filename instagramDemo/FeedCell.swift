@@ -13,7 +13,6 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var subTitleLabel: UILabel!
     @IBOutlet var bodyImage: UIImageView!
-    @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var descriptionField: UITextView!
 
     override func awakeFromNib() {
