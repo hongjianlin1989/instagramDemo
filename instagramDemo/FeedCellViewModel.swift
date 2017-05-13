@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AlamofireImage
+import Alamofire
 
 class FeedCellViewModel: NSObject {
     let feed: Feed?
@@ -28,7 +30,34 @@ class FeedCellViewModel: NSObject {
     }
     
     
+    public var bodyImageUrl: URL? {
+        return URL.init(string: (feed?.bodyPNG)!)
+    }
     
-    
-    
+    func downloadImages(imageUrl: URL , completion: ((_ image: UIImage ,  _ error: Error?) -> Void)?) {
+        
+        Alamofire.request(imageUrl).responseImage { response in
+            debugPrint(response)
+            debugPrint(response.result)
+            
+            switch response.result {
+            case .success( _):
+                var returnImage = UIImage.init()
+                if let image = response.result.value {
+                    returnImage = image
+                    print("image downloaded: \(image)")
+                }
+                completion!(returnImage,nil)
+                
+                
+            case .failure(let error):
+                
+                completion!(UIImage.init() ,error)
+            }
+            
+        }
+        
+    }
+
 }
+

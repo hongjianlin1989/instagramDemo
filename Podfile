@@ -7,7 +7,7 @@ target 'instagramDemo' do
   inhibit_all_warnings!
 
   pod 'Alamofire'
- 
+  pod 'AlamofireImage', '~> 3.1'
   
   target 'instagramDemoTests' do
  

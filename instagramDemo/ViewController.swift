@@ -41,7 +41,14 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         cell.descriptionField.text = feedVM.bodyDescription
         cell.subTitleLabel.text = feedVM.timeCreated
         
-
+        feedVM.downloadImages(imageUrl: feedVM.bodyImageUrl!) { (image, Error) in
+            cell.bodyImage.image = image
+        }
+        
+        feedVM.downloadImages(imageUrl: (feedVM.feed?.userProfileImageUrl)!) { (image, Error) in
+            cell.headerImage.image = image
+        }
+        
         return cell
     }
     
