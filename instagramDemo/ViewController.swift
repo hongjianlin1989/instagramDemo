@@ -21,7 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 375, height: 500)
+        return view.bounds.size
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -38,12 +38,10 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! FeedCell
         let feedVM = FeedCellViewModel.init(inputFeed: feedArray[indexPath.row])
         cell.nameLabel.text = feedVM.userName
-        cell.descriptionLabel.text = feedVM.bodyDescription
+        cell.descriptionField.text = feedVM.bodyDescription
         cell.subTitleLabel.text = feedVM.timeCreated
         
-//        cell.layoutIfNeeded()
-//        let height = cell.descriptionLabel.frame.size.height + cell.descriptionLabel.frame.origin.y
-//        cell.frame.size = CGSize(width: cell.contentView.frame.size.width, height: height)
+
         return cell
     }
     
