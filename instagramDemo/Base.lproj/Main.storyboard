@@ -134,7 +134,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="CloseButtonClick:" destination="O5m-R8-ZDK" eventType="touchUpInside" id="d66-I2-Nov"/>
+                                    <action selector="closeButtonClick:" destination="O5m-R8-ZDK" eventType="touchUpInside" id="OQP-TB-ri4"/>
                                 </connections>
                             </button>
                         </subviews>

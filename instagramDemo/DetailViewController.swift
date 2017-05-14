@@ -16,7 +16,7 @@ class DetailViewController: UIViewController, UICollectionViewDelegate,UICollect
     
     @IBOutlet var collectionView: UICollectionView!
     
-    @IBAction func CloseButtonClick(_ sender: Any) {
+    @IBAction func closeButtonClick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
