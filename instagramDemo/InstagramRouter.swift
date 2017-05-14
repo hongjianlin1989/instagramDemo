@@ -18,15 +18,12 @@ public enum InstagramRouter: URLRequestConvertible {
         }
     }
     
-    
     var path: String {
         switch self {
         case .getUserFeedList:
             return "/users/self/media/recent/"
         }
     }
-    
-
     
     // MARK: URLRequestConvertible
     
@@ -47,7 +44,7 @@ public enum InstagramRouter: URLRequestConvertible {
         
         return urlRequest
     }
-
+    
     
     
     

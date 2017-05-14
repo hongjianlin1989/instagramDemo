@@ -34,7 +34,6 @@ class Feed: NSObject {
         return captionDic["text"] as? String
     }
     
-    
     public var bodyPNG: String? {
         let bodyPNGDic = dic?.object(forKey: "images") as! NSDictionary
         let standardResolution = bodyPNGDic.object(forKey: "standard_resolution") as! NSDictionary

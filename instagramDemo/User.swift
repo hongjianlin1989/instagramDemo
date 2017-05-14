@@ -14,11 +14,9 @@ class User: NSObject {
         dic = objDictionary
     }
     
-    
     public var profilePicture: String? {
         return dic?["profile_picture"] as? String
     }
-    
     
     public var fullName: String? {
         return dic?["full_name"] as? String

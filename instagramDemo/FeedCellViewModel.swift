@@ -24,7 +24,7 @@ class FeedCellViewModel: NSObject {
     public var bodyDescription: String? {
         return feed.feedDescription
     }
-
+    
     public var timeCreated: String? {
         let date = NSDate(timeIntervalSince1970: Double(feed.time!)!)
         let formatter = DateFormatter()
@@ -64,6 +64,6 @@ class FeedCellViewModel: NSObject {
         }
         
     }
-
+    
 }
 

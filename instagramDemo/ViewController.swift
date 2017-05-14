@@ -20,7 +20,6 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         return view.bounds.size
     }
     
@@ -54,7 +53,6 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let senderFeed = feedArray[indexPath.row]
         self.performSegue(withIdentifier: "DetailViewController", sender: senderFeed)
     }
@@ -62,13 +60,10 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     // MARK: - NewWorking
     
     func getListOfFeed(){
-        
         InstagramServce.getListOfFeed(params: ["access_token" : DefaultSettings.sharedInstance.token]) { (feedArray, Error) in
             self.feedArray = feedArray
             self.collectionView.reloadData()
-            
         }
-        
     }
     
     // MARK: - View State
@@ -92,7 +87,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
             let detailVC = segue.destination as! DetailViewController
             detailVC.feed = sender as? Feed
         }
-
+        
     }
     
 }

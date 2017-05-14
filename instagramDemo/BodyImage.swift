@@ -18,7 +18,5 @@ class BodyImage: NSObject {
         let standardResolutionDic = dic?.object(forKey: "standard_resolution") as! NSDictionary
         return standardResolutionDic["url"] as? String
     }
-    
-    
-    
+
 }

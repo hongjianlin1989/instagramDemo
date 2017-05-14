@@ -34,7 +34,6 @@ class InstagramServce: NSObject {
                     
                     completion!(feedArray,nil)
                     
-                    
                 case .failure(let error):
                     print("error: \(error)")
                     completion!([] ,error)

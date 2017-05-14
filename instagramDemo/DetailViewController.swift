@@ -9,7 +9,6 @@
 import UIKit
 
 class DetailViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-
     
     let reuseIdentifier = "FeedCell"
     
@@ -17,16 +16,16 @@ class DetailViewController: UIViewController, UICollectionViewDelegate,UICollect
     
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBAction func CloseButtonClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - View State
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.reloadData()
         // Do any additional setup after loading the view.
-    }
-
-    
-    @IBAction func CloseButtonClick(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,19 +70,17 @@ class DetailViewController: UIViewController, UICollectionViewDelegate,UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
