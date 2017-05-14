@@ -9,14 +9,14 @@
 import UIKit
 import Alamofire
 
-class InstagramServce: NSObject {
+class InstagramUserServce: NSObject {
     /**
      Fetches the feed from the network `GET /self/media/recent/`, then creates `feed` objects .
      
      */
     public static func getListOfFeed(params: [String: Any] , completion: ((_ array: Array<Feed> ,  _ error: Error?) -> Void)?) {
         
-        Alamofire.request(InstagramRouter.getUserFeedList(parameters: params))
+        Alamofire.request(InstagramUserRouter.getUserFeedList(parameters: params))
             .validate()
             .responseJSON { (response) in
                 

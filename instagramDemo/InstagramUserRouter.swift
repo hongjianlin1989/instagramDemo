@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public enum InstagramRouter: URLRequestConvertible {
+public enum InstagramUserRouter: URLRequestConvertible {
     case getUserFeedList(parameters: Parameters)
     
     var method: HTTPMethod {
