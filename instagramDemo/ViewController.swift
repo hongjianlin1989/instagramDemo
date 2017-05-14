@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -65,13 +66,17 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.collectionView.setContentOffset(CGPoint.zero, animated: false)
+        }
         getListOfFeed()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        collectionView.setContentOffset(CGPoint.zero, animated: false)
     }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
