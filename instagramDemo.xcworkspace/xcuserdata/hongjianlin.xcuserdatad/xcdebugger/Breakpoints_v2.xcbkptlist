@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "instagramDemo/FeedCellViewModel.swift"
-            timestampString = "516466195.025861"
+            timestampString = "516467659.010022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "bodyImageUrl"
             landmarkType = "24">
          </BreakpointContent>
