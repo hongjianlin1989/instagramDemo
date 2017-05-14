@@ -32,12 +32,12 @@ class FeedCellViewModel: NSObject {
         return formatter.string(from: date as Date)
     }
     
-    public var userProfileImageUrl: URL? {
-        return URL.init(string: (feed?.user?.profilePicture)!)
+    public var userProfileImageUrl: String? {
+        return feed.user?.profilePicture
     }
     
-    public var bodyImageUrl: URL? {
-        return URL.init(string: (feed?.bodyPNG)!)
+    public var bodyImageUrl: String? {
+        return feed.bodyPNG
     }
     
     func downloadImages(imageUrl: URL , completion: ((_ image: UIImage ,  _ error: Error?) -> Void)?) {

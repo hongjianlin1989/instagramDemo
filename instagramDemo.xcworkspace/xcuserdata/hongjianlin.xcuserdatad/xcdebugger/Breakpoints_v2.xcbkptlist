@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "instagramDemo/ViewController.swift"
-            timestampString = "516466439.658304"
+            timestampString = "516467492.052182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "getListOfFeed()"
             landmarkType = "7">
          </BreakpointContent>

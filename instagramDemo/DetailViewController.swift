@@ -56,14 +56,9 @@ class DetailViewController: UIViewController, UICollectionViewDelegate,UICollect
         cell.nameLabel.text = feedVM.userName
         cell.descriptionField.text = feedVM.bodyDescription
         cell.subTitleLabel.text = feedVM.timeCreated
-        
-        feedVM.downloadImages(imageUrl: feedVM.bodyImageUrl!) { (image, Error) in
-            cell.bodyImage.image = image
-        }
-        
-        feedVM.downloadImages(imageUrl: (feedVM.userProfileImageUrl)!) { (image, Error) in
-            cell.headerImage.image = image
-        }
+    
+        cell.bodyImage.loadImageUsingCacheWithUrl(urlString: (feedVM.bodyImageUrl)!)
+        cell.headerImage.loadImageUsingCacheWithUrl(urlString: (feedVM.userProfileImageUrl)!)
         
         return cell
     }
