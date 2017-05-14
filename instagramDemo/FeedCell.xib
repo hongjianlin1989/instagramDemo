@@ -66,7 +66,7 @@
                             <constraint firstAttribute="width" secondItem="DSb-VG-6eX" secondAttribute="height" multiplier="1:1" id="vhW-Wl-yPA"/>
                         </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vve-HL-GlF">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vve-HL-GlF">
                         <rect key="frame" x="0.0" y="445" width="375" height="222"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

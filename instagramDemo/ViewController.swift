@@ -64,9 +64,13 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     // MARK: - View State
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         getListOfFeed()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.setContentOffset(CGPoint.zero, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
