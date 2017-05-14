@@ -62,7 +62,7 @@ class DetailViewController: UIViewController, UICollectionViewDelegate,UICollect
             cell.bodyImage.image = image
         }
         
-        feedVM.downloadImages(imageUrl: (feedVM.feed?.userProfileImageUrl)!) { (image, Error) in
+        feedVM.downloadImages(imageUrl: (feedVM.userProfileImageUrl)!) { (image, Error) in
             cell.headerImage.image = image
         }
         

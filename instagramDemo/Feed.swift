@@ -34,9 +34,6 @@ class Feed: NSObject {
         return captionDic["text"] as? String
     }
     
-    public var userProfileImageUrl: URL? {
-        return URL.init(string: (user?.profilePicture)!)
-    }
     
     public var bodyPNG: String? {
         let bodyPNGDic = dic?.object(forKey: "images") as! NSDictionary

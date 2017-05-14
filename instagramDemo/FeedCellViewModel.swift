@@ -11,24 +11,30 @@ import AlamofireImage
 import Alamofire
 
 class FeedCellViewModel: NSObject {
-    let feed: Feed?
+    let feed: Feed!
     
     init(inputFeed:Feed) {
         feed = inputFeed
     }
     
     public var userName: String? {
-        return feed?.userName
+        return feed.userName
     }
     
     public var bodyDescription: String? {
-        return feed?.feedDescription
+        return feed.feedDescription
     }
 
     public var timeCreated: String? {
-        return feed?.time
+        let date = NSDate(timeIntervalSince1970: Double(feed.time!)!)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter.string(from: date as Date)
     }
     
+    public var userProfileImageUrl: URL? {
+        return URL.init(string: (feed?.user?.profilePicture)!)
+    }
     
     public var bodyImageUrl: URL? {
         return URL.init(string: (feed?.bodyPNG)!)
