@@ -21,7 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return view.bounds.size
+        return CGSize(width: view.frame.size.width, height: view.frame.size.height-20)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -66,9 +66,11 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.collectionView.setContentOffset(CGPoint.zero, animated: false)
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//            self.collectionView.setContentOffset(CGPoint.zero, animated: false)
+//        }
+     //   [self.calendarView setContentInset:UIEdgeInsetsMake(-20, 0, 0, 0)];
+     //   self.collectionView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0)
         getListOfFeed()
     }
 

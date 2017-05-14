@@ -74,7 +74,7 @@
                     </textView>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.91372549020000005" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="1oB-24-RjA" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="375:667" id="0bU-GW-8o5"/>
                 <constraint firstAttribute="bottom" secondItem="vve-HL-GlF" secondAttribute="bottom" id="8pR-2d-Xky"/>
