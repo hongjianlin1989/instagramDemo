@@ -63,7 +63,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     
     func getListOfFeed(){
         
-        Feed.getListOfFeed(params: ["access_token" : DefaultSettings.sharedInstance.token]) { (feedArray, Error) in
+        InstagramServce.getListOfFeed(params: ["access_token" : DefaultSettings.sharedInstance.token]) { (feedArray, Error) in
             self.feedArray = feedArray
             self.collectionView.reloadData()
             
